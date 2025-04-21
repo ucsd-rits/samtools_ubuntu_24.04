@@ -29,15 +29,16 @@ RUN git clone https://github.com/samtools/bcftools.git
 RUN cd bcftools
 RUN  autoheader && autoconf && ./configure --enable-libgsl --enable-perl-filters
 RUN make
-# RUN export BCFTOOLS_PLUGINS=/path/to/bcftools/plugins
+RUN export BCFTOOLS_PLUGINS=~/build/bcftools/plugins
 
 RUN pip install --no-cache-dir networkx scipy
 
 # Set up working directory
-WORKDIR /app
+#RUN mkdir ~/app
+#WORKDIR ~/app
 
 # Copy application files (if applicable)
-# COPY . /app
+# COPY . ~/app
 
 # Expose ports (if applicable)
 # EXPOSE 8080
