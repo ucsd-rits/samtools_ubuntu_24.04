@@ -23,13 +23,13 @@ RUN apt-get update && \
 
 # Download and install samtools
 USER $NB_UID:$NB_GID
-RUN mkdir build; cd build
-RUN git clone --recurse-submodules https://github.com/samtools/htslib.git
-RUN git clone https://github.com/samtools/bcftools.git
-RUN cd bcftools
-RUN  autoheader && autoconf && ./configure --enable-libgsl --enable-perl-filters
-RUN make
-RUN export BCFTOOLS_PLUGINS=~/build/bcftools/plugins
+#RUN mkdir build; cd build
+#RUN git clone --recurse-submodules https://github.com/samtools/htslib.git
+#RUN git clone https://github.com/samtools/bcftools.git
+#RUN cd bcftools
+#RUN  autoheader && autoconf && ./configure --enable-libgsl --enable-perl-filters
+#RUN make
+#RUN export BCFTOOLS_PLUGINS=~/build/bcftools/plugins
 
 RUN pip install --no-cache-dir networkx scipy
 
