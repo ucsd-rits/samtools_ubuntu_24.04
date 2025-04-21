@@ -22,7 +22,7 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 # Download and install samtools
-USER $NB_UID:$NB_GID
+#USER $NB_UID:$NB_GID
 #RUN mkdir build; cd build
 #RUN git clone --recurse-submodules https://github.com/samtools/htslib.git
 #RUN git clone https://github.com/samtools/bcftools.git
@@ -31,7 +31,7 @@ USER $NB_UID:$NB_GID
 #RUN make
 #RUN export BCFTOOLS_PLUGINS=~/build/bcftools/plugins
 
-RUN pip install --no-cache-dir networkx scipy
+#RUN pip install --no-cache-dir networkx scipy
 
 # Set up working directory
 #RUN mkdir ~/app
