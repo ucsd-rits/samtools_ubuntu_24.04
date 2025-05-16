@@ -26,7 +26,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     curl wget vim git htop ca-certificates python3-pip \
     zlib1g zlib1g-dev libperl-dev bzip2 libbz2-dev liblzma-dev libcurl4t64 libcurl4-openssl-dev libssl-dev \
-    build-essential autoconf automake autotools-dev m4 libgsl-dev \
+    build-essential autoconf automake autotools-dev m4 libgsl-dev parallel \
 #    python3.12-venv \
     && rm -rf /var/lib/apt/lists/*
 
